@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Propose</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Solitreo"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form>
+      <div class="wrapper">
+        <input type="checkbox" id="ck1" onClick="check()"/>
+        <label for="ck1">I</label>
+        <input type="checkbox" id="ck2" onClick="check()"/>
+        <label for="ck2">love</label>
+        <input type="checkbox" id="ck3" onClick="check()"/>
+        <label for="ck3">you</label>
+        <span>(Click on words)</span>
+      </div>
+      </form>
+  </body>
+</html>
+
+<script>
+  function check() {
+  if ( document.forms[0].elements[0].checked == true && document.forms[0].elements[1].checked == true && document.forms[0].elements[2].checked == true ) {
+    if ( ! $('.wrapper').hasClass('throb')) {
+        // Do things on Nav Close
+        $('.wrapper').addClass('throb');
+    } 
+  } else {
+    if ($('.wrapper').hasClass('throb')) {
+        // Do things on Nav Close
+        $('.wrapper').removeClass('throb');
+    }
+  }
+ }
+</script>
